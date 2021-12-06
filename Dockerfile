@@ -18,7 +18,7 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 
-RUN mkdir /home/${NB_USER}/fg_bioimage
-RUN echo '10.35.106.250:/fg_bioimage   /home/${NB_USER}/fg_bioimage    nfs    rw,relatime,user,noauto   0   0' >> /etc/fstab
+RUN mkdir fg_bioimage
+RUN echo "10.35.106.250:/fg_bioimage  fg_bioimage    nfs    rw,relatime,user,noauto   0   0" >> /etc/fstab
 
 USER ${USER}
